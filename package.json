@@ -1,0 +1,38 @@
+{
+  "name": "cucumberjs",
+  "version": "1.0.0",
+  "description": "Repository to implement CucumberJS ecosystem",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "core-util-is": "^1.0.2",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "fs-extra": "^9.0.1",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1",
+    "winston": "^3.3.3",
+    "yargs": "^15.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "e2e": "protractor ./config/protractor.config.js",
+    "pree2e": "node ./config/utils/cleanup.js",
+    "postinstall": "webdriver-manager update --versions.standalone=3.10.0 --gecko=false",
+    "e2e:update": "webdriver-manager update",
+    "e2e:generate-report": "node ./test/e2e/utils/reporter.js",
+    "e2e:start-server": "webdriver-manager start --versions.standalone=3.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bandax/CucumberJS.git"
+  },
+  "author": "Luis Banda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bandax/CucumberJS/issues"
+  },
+  "homepage": "https://github.com/bandax/CucumberJS#readme"
+}

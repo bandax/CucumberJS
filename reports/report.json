@@ -1,0 +1,181 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Contact Us",
+    "line": 2,
+    "id": "contact-us",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "uri": "test\\e2e\\features\\ContactUs\\contactus.feature",
+    "elements": [
+      {
+        "id": "contact-us;as-a-user-i-can-send-an-email",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "As a user I can send an email",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@epam",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open \"https://www.epam.com/about/who-we-are/contact\" url",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\browserInteractions.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1813000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Click accept the cookies Yes",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\elementInteractions.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I fill out the form with John,Kennedy,john@test.com,Talk to Sales in Continental Europe,Yes",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\elementInteractions.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4425000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "All fields are filled out with values John,Kennedy,john@test.com,Talk to Sales in Continental Europe,Yes",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\validationSteps\\ContactUs\\contactUs.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "contact-us;as-a-user-i-can-send-an-email",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "As a user I can send an email",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@epam",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open \"https://www.epam.com/about/who-we-are/contact\" url",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\browserInteractions.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 817000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Click accept the cookies No",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\elementInteractions.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I fill out the form with Anny,Lee,anny@test.com,Talk to Sales in the UK,No",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\actionSteps\\elementInteractions.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4492000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "All fields are filled out with values Anny,Lee,anny@test.com,Talk to Sales in the UK,No",
+            "match": {
+              "location": "test\\e2e\\step_definitions\\validationSteps\\ContactUs\\contactUs.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

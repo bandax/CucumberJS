@@ -16,7 +16,9 @@
     "winston": "^3.3.3",
     "yargs": "^15.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "protractor-junit-xml-plugin": "^1.3.2"
+  },
   "scripts": {
     "e2e": "protractor ./config/protractor.config.js",
     "pree2e": "node ./config/utils/cleanup.js",

@@ -11,15 +11,17 @@ const reporterOptions = {
     jsonFile: path.join(__dirname, '../reports/report.json'),
     output: path.join(__dirname, '../reports/cucumber_report.html'),
     reportSuiteAsScenarios: true,
-    launchReport: true
+    launchReport: true,
+    screenshotsDirectory: 'screenshots/',
+    storeScreenshots: true    
 }
 
 exports.config = {
     allScriptsTimeout: 200000,
     getTimeoutPage: 200000,  
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    //specs: path.resolve('./test/e2e/features/**/*.feature'),
-    specs: ['../test/e2e/features/ContactUs/contactus.feature'],
+    specs: path.resolve('./test/e2e/features/**/*.feature'),
+    //specs: ['../test/e2e/features/ContactUs/contactus.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     capabilities: {
@@ -45,5 +47,17 @@ exports.config = {
     },
     afterLaunch: () => {        
         return reporter.generate(reporterOptions);
-    }
+    },
+    plugins: [
+        {
+            path: '../node_modules/protractor-junit-xml-plugin', //path for protractor plugin
+            outdir: 'reports',
+            filename: 'e2e-tests',
+            parseXrayId: false, //default false
+            jiraProjectKey: 'CARE',
+            uniqueName: true, //default true
+            uniqueFolderPerExecution: true, // default false
+            captureSapphireWebAppContextVar: true //default false
+        }
+    ]
 }
